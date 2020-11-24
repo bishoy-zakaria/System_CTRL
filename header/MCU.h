@@ -20,22 +20,24 @@ typedef uint8 Mcu_ClockType;
 typedef uint8 Mcu_RawResetType;
 typedef MCU_Cfg Mcu_ConfigType;              //(Clock Source PllUSe Freq)
 /* ************************ pripherals ***************************** */
-#define WatchDog_Timer                0
-#define Timer                         1
-#define GPIO                          2
-#define DirectMemoryAccess            3
-#define HibernationRunModeClock       4
-#define UART                          5
-#define SSI                           6
-#define I2C                           7
-#define USB                           8
-#define CAN                           9
-#define ADC                           10
-#define ACMP                          11
-#define PWM                           12
-#define QEI                           13
-#define EEPROM                        14
-#define WTIMER                        15
+
+#define	WDT      0
+#define	Timer    1
+#define	GPIO     2
+#define	DMA      3
+#define	HIP      4 
+#define	UART     5
+#define	SSI      6 
+#define	I2C      7
+#define	USB      8
+#define	CAN      9
+#define	ADC      10
+#define	ACMP     11
+#define	PWM      12
+#define	QEI      13
+#define	EEPROM   14
+#define	WTIMER   15
+
 /* ************************ Clock source ***************************** */
 #define PrecisionInternalOscillator               0
 #define MainOscillator                            1

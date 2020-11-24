@@ -264,15 +264,15 @@ Image Symbol Table
     .text                                    0x000004fe   Section        0  indicate_semi.o(.text)
     i.GPIO_HIGH_Performace                   0x00000500   Section        0  mcu.o(i.GPIO_HIGH_Performace)
     i.MCU_Source                             0x00000514   Section        0  mcu.o(i.MCU_Source)
-    i.Mcu_DistributePllClock                 0x00000574   Section        0  mcu.o(i.Mcu_DistributePllClock)
-    i.Mcu_GetPllStatus                       0x00000594   Section        0  mcu.o(i.Mcu_GetPllStatus)
-    i.Mcu_Init                               0x000005a4   Section        0  mcu.o(i.Mcu_Init)
-    i.Mcu_InitClock                          0x000005b0   Section        0  mcu.o(i.Mcu_InitClock)
-    i.SystemInit                             0x000006ec   Section        0  system_tm4c123.o(i.SystemInit)
-    i.main                                   0x00000700   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x00000728   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x00000728   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x00000734   Section       36  main.o(.constdata)
+    i.Mcu_DistributePllClock                 0x0000057c   Section        0  mcu.o(i.Mcu_DistributePllClock)
+    i.Mcu_GetPllStatus                       0x0000059c   Section        0  mcu.o(i.Mcu_GetPllStatus)
+    i.Mcu_Init                               0x000005ac   Section        0  mcu.o(i.Mcu_Init)
+    i.Mcu_InitClock                          0x000005b8   Section        0  mcu.o(i.Mcu_InitClock)
+    i.SystemInit                             0x000009d0   Section        0  system_tm4c123.o(i.SystemInit)
+    i.main                                   0x000009e4   Section        0  main.o(i.main)
+    x$fpl$fpinit                             0x00000a0c   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x00000a0c   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x00000a18   Section       36  main.o(.constdata)
     .data                                    0x20000000   Section        4  mcu.o(.data)
     .bss                                     0x20000004   Section       96  libspace.o(.bss)
     HEAP                                     0x20000068   Section        0  startup_tm4c123.o(HEAP)
@@ -502,18 +502,18 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x000004fd   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x000004ff   Thumb Code     0  indicate_semi.o(.text)
     GPIO_HIGH_Performace                     0x00000501   Thumb Code    14  mcu.o(i.GPIO_HIGH_Performace)
-    MCU_Source                               0x00000515   Thumb Code    86  mcu.o(i.MCU_Source)
-    Mcu_DistributePllClock                   0x00000575   Thumb Code    26  mcu.o(i.Mcu_DistributePllClock)
-    Mcu_GetPllStatus                         0x00000595   Thumb Code    12  mcu.o(i.Mcu_GetPllStatus)
-    Mcu_Init                                 0x000005a5   Thumb Code     6  mcu.o(i.Mcu_Init)
-    Mcu_InitClock                            0x000005b1   Thumb Code   304  mcu.o(i.Mcu_InitClock)
-    SystemInit                               0x000006ed   Thumb Code    14  system_tm4c123.o(i.SystemInit)
-    main                                     0x00000701   Thumb Code    34  main.o(i.main)
-    _fp_init                                 0x00000729   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00000731   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00000731   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x00000758   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000778   Number         0  anon$$obj.o(Region$$Table)
+    MCU_Source                               0x00000515   Thumb Code    94  mcu.o(i.MCU_Source)
+    Mcu_DistributePllClock                   0x0000057d   Thumb Code    26  mcu.o(i.Mcu_DistributePllClock)
+    Mcu_GetPllStatus                         0x0000059d   Thumb Code    12  mcu.o(i.Mcu_GetPllStatus)
+    Mcu_Init                                 0x000005ad   Thumb Code     6  mcu.o(i.Mcu_Init)
+    Mcu_InitClock                            0x000005b9   Thumb Code  1048  mcu.o(i.Mcu_InitClock)
+    SystemInit                               0x000009d1   Thumb Code    14  system_tm4c123.o(i.SystemInit)
+    main                                     0x000009e5   Thumb Code    34  main.o(i.main)
+    _fp_init                                 0x00000a0d   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x00000a15   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x00000a15   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x00000a3c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000a5c   Number         0  anon$$obj.o(Region$$Table)
     MCU_PTR                                  0x20000000   Data           4  mcu.o(.data)
     __libspace_start                         0x20000004   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000064   Data           0  libspace.o(.bss)
@@ -526,9 +526,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000030d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x0000077c, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000a60, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000778, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000a5c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -592,32 +592,32 @@ Memory Map of the image
     0x000004fe   0x000004fe   0x00000000   Code   RO          270    .text               c_w.l(indicate_semi.o)
     0x000004fe   0x000004fe   0x00000002   PAD
     0x00000500   0x00000500   0x00000014   Code   RO           31    i.GPIO_HIGH_Performace  mcu.o
-    0x00000514   0x00000514   0x00000060   Code   RO           32    i.MCU_Source        mcu.o
-    0x00000574   0x00000574   0x00000020   Code   RO           33    i.Mcu_DistributePllClock  mcu.o
-    0x00000594   0x00000594   0x00000010   Code   RO           34    i.Mcu_GetPllStatus  mcu.o
-    0x000005a4   0x000005a4   0x0000000c   Code   RO           36    i.Mcu_Init          mcu.o
-    0x000005b0   0x000005b0   0x0000013c   Code   RO           37    i.Mcu_InitClock     mcu.o
-    0x000006ec   0x000006ec   0x00000014   Code   RO          100    i.SystemInit        system_tm4c123.o
-    0x00000700   0x00000700   0x00000028   Code   RO            1    i.main              main.o
-    0x00000728   0x00000728   0x0000000a   Code   RO          255    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00000732   0x00000732   0x00000002   PAD
-    0x00000734   0x00000734   0x00000024   Data   RO            2    .constdata          main.o
-    0x00000758   0x00000758   0x00000020   Data   RO          323    Region$$Table       anon$$obj.o
+    0x00000514   0x00000514   0x00000068   Code   RO           32    i.MCU_Source        mcu.o
+    0x0000057c   0x0000057c   0x00000020   Code   RO           33    i.Mcu_DistributePllClock  mcu.o
+    0x0000059c   0x0000059c   0x00000010   Code   RO           34    i.Mcu_GetPllStatus  mcu.o
+    0x000005ac   0x000005ac   0x0000000c   Code   RO           36    i.Mcu_Init          mcu.o
+    0x000005b8   0x000005b8   0x00000418   Code   RO           37    i.Mcu_InitClock     mcu.o
+    0x000009d0   0x000009d0   0x00000014   Code   RO          100    i.SystemInit        system_tm4c123.o
+    0x000009e4   0x000009e4   0x00000028   Code   RO            1    i.main              main.o
+    0x00000a0c   0x00000a0c   0x0000000a   Code   RO          255    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x00000a16   0x00000a16   0x00000002   PAD
+    0x00000a18   0x00000a18   0x00000024   Data   RO            2    .constdata          main.o
+    0x00000a3c   0x00000a3c   0x00000020   Data   RO          323    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000778, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000a5c, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000778   0x00000004   Data   RW           39    .data               mcu.o
+    0x20000000   0x00000a5c   0x00000004   Data   RW           39    .data               mcu.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000004, Load base: 0x0000077c, Size: 0x00000264, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000004, Load base: 0x00000a60, Size: 0x00000264, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000004        -       0x00000060   Zero   RW          197    .bss                c_w.l(libspace.o)
-    0x20000064   0x0000077c   0x00000004   PAD
+    0x20000064   0x00000a60   0x00000004   PAD
     0x20000068        -       0x00000000   Zero   RW           89    HEAP                startup_tm4c123.o
     0x20000068        -       0x00000200   Zero   RW           88    STACK               startup_tm4c123.o
 
@@ -629,13 +629,13 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        40          6         36          0          0       3395   main.o
-       492         44          0          4          0       3357   mcu.o
-       276         24        620          0        512       5468   startup_tm4c123.o
-        20          6          0          0          0        477   system_tm4c123.o
+        40          6         36          0          0       3379   main.o
+      1232         48          0          4          0       3641   mcu.o
+       276         24        620          0        512       5480   startup_tm4c123.o
+        20          6          0          0          0        485   system_tm4c123.o
 
     ----------------------------------------------------------------------
-       828         80        688          4        512      12697   Object Totals
+      1568         84        688          4        512      12985   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -687,15 +687,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1224         96        688          4        612      12869   Grand Totals
-      1224         96        688          4        612      12869   ELF Image Totals
-      1224         96        688          4          0          0   ROM Totals
+      1964        100        688          4        612      13157   Grand Totals
+      1964        100        688          4        612      13157   ELF Image Totals
+      1964        100        688          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1912 (   1.87kB)
+    Total RO  Size (Code + RO Data)                 2652 (   2.59kB)
     Total RW  Size (RW Data + ZI Data)               616 (   0.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       1916 (   1.87kB)
+    Total ROM Size (Code + RO Data + RW Data)       2656 (   2.59kB)
 
 ==============================================================================
 

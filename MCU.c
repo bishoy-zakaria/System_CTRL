@@ -42,7 +42,7 @@ void MCU_Source(void)
 	RCC |= (XTAL_16_MHz << 6);                     // initialization for the crystal
   	for (i=0 ; i< MAX_Pripheral_Num ;i++)
 	{
-		if (((MCU_PTR->freq)/ XTAL_Frequency) <= 16) // use RCC register
+		if (((MCU_PTR[i].freq)/ XTAL_Frequency) <= 16) // use RCC register
 		{
 			if      (Clock_Source   ==    MainOscillator )
 				RCC = RCC | (0x00000000);
@@ -81,7 +81,39 @@ void Mcu_InitClock ( void )
 	for(i =0; i< MAX_Pripheral_Num ;i++)
 	{
 		/* ***************** Gating ************************* */
-		SET_BIT(RCGC(MCU_PTR[i].pripheral) , MCU_PTR[i].Pripheral_PORT);
+		if ( MCU_PTR[i].pripheral == WDT )
+		SET_BIT(RCGCWD,MCU_PTR[i].Pripheral_PORT);	
+		else if (MCU_PTR[i].pripheral == Timer)
+		SET_BIT(RCGCTIMER,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == GPIO)
+		SET_BIT(RCGCGPIO,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == DMA)
+		SET_BIT(RCGCDMA,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == HIP)
+		SET_BIT(RCGCHIB,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == UART)
+		SET_BIT(RCGCUART,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == SSI)
+		SET_BIT(RCGCSSI,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == I2C)
+		SET_BIT(RCGCI2C,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == USB)
+		SET_BIT(RCGCUSB,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == CAN)
+		SET_BIT(RCGCCAN,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == ADC)
+		SET_BIT(RCGCADC,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == ACMP)
+		SET_BIT(RCGCACMP,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == PWM)
+		SET_BIT(RCGCPWM,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == QEI)
+		SET_BIT(RCGCQEI,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == EEPROM)
+		SET_BIT(RCGCEEPROM,MCU_PTR[i].Pripheral_PORT);
+		else if (MCU_PTR[i].pripheral == WTIMER)
+		SET_BIT(RCGCWTIMER,MCU_PTR[i].Pripheral_PORT);
+		
 		/* **************** SET Frequency ******************* */
 		
 		Div = XTAL_Frequency / MCU_PTR[i].freq;
